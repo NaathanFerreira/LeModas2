@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lê Modas</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat';
+        }
+        .screen {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 40px 1fr 40px;
+            grid-template-areas: 
+            "header header"
+            "nav content"
+            "nav footer";
+        }
+        .header {
+            grid-area: header;
+            box-shadow: 0px 0px 155px #0004;
+        }
+        .header a {
+            color: #FFF
+        }
+        .nav {
+            background-color: rgb(80, 80, 80);
+            grid-area: nav;
+            box-shadow: 0px 0px 15px #0004;
+        }
+        .nav .menu{
+            width: 100%;
+            margin: 5px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav .menu a {
+            padding: 15px;
+            color: #FFF;
+            text-decoration: none;
+        }
+        .nav .menu a:hover {
+            background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
+        }
+        .content {
+            grid-area: content;
+        }
+        .content-area{
+            background-color: #FFF;
+            box-shadow: 0px 0px 15px #0004;
+        }
+        .footer {
+            background-color: #FFF;
+            grid-area: footer;
+            box-shadow: 0px 0px 15px #0004;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0px 15px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="screen">
+
+        <div class="header bg-dark text-center">
+            <a class="navbar-brand" href="#"> <i class="fas fa-tshirt"></i> LÊ MODAS </a>
+        </div>
+
+        <aside class="nav">
+            <nav class="menu">
+                <a href=""> <i class="fas fa-home"></i> Home </a>
+                <a href=""> <i class="fas fa-user"></i> Clientes </a>
+            </nav>
+        </aside>
+
+        <div class="content p-4">
+            <div class="content-area m-2 p-3">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>Desenvolvido com <i class="fas fa-heart"></i> por <strong> Nathan</strong></span>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
